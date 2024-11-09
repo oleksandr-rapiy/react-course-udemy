@@ -1,3 +1,5 @@
+import './Concept.css'
+
 function Concept({ title, description, image }) {
   return (
     <li>
