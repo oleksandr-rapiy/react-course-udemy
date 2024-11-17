@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { styled } from "styled-components";
-import Button from "./Button";
+import ButtonV2 from "./Button";
 import Input from "./Input";
 
 const ControlContainer = styled.div`
@@ -80,7 +80,7 @@ export default function AuthInputs() {
         <button type="button" className="text-button">
           Create a new account
         </button>
-        <Button onClick={handleLogin}>Sign In</Button>
+        <ButtonV2 onClick={handleLogin}>Sign In</ButtonV2>
       </div>
     </div>
   );

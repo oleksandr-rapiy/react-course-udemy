@@ -21,11 +21,25 @@ const Input = styled.input`
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 `;
 
+// export default function CustomInput({ label, invalid, ...props }) {
+//   return (
+//     <p>
+//       <Label $invalid={invalid}>{label}</Label>
+//       <Input $invalid={invalid} {...props} />
+//     </p>
+//   );
+// }
+
 export default function CustomInput({ label, invalid, ...props }) {
   return (
-    <p>
-      <Label $invalid={invalid}>{label}</Label>
-      <Input $invalid={invalid} {...props} />
-    </p>
+    <>
+      <label className="block mb-2 text-xs font-bold tracking-wide uppercase text-stone-300">
+        {label}
+      </label>
+      <input
+        className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow bg-stone-300"
+        {...props}
+      />
+    </>
   );
 }
